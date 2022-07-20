@@ -1,5 +1,5 @@
+'use strict';
 // uzd 1
-const articleEl = document.createElement('article');
 
 /**
  * Function crates section el and puts it to body
@@ -41,7 +41,7 @@ function createSection() {
 // createArticle();
 
 function createArticleAndAppend() {
-  const articleEl = createProperElAndAppend('article', 'card');
+  const articleEl = createProperElAndAppend('article', 'card', '', document.body);
   createProperElAndAppend('h3', 'title_a', 'JS', articleEl);
   createProperElAndAppend('p', 'date', '2022 02 15', articleEl);
   createProperElAndAppend(
@@ -51,6 +51,7 @@ function createArticleAndAppend() {
     articleEl
   );
   // articleEl.append(h3El, pDateEl, pTextEl);
-  document.body.append(articleEl);
+  // document.body.append(articleEl);
 }
 createArticleAndAppend();
+createProperEl('li', '', 'Pirmadienis');
